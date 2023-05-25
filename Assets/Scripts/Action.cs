@@ -75,7 +75,12 @@ public class Action : MonoBehaviour
         }
         else
             GameManager.instance.ShowText("Промах", 25, Color.white, GameManager.instance.enemy.transform.position, Vector3.up * 35, 1f);
-        player._animator.Play("attack_1");
+
+        if (GameManager.instance.isBow == true)
+            player._animator.Play("attack_bow");
+        else
+            player._animator.Play("attack_1");
+
         canAttack = false;
         fightMenuAnimator.Play("FightMenuHidden");
 

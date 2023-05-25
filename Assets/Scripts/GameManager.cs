@@ -30,19 +30,21 @@ public class GameManager : MonoBehaviour
         fightCamera.enabled = false;
         fma.Play("FightMenuHidden");
         player.transform.position = Vector3.zero;
-        WeaponDamage = instance.weaponDmgArr[weaponNum];
         hitpoint = instance.player.hitpoint;
         maxHitpoint = instance.player.maxHitpoint;
         instance.UpdateHUD();
         fma.Play("EnemyHealthHidden");
         GameManager.instance.UpdateHUD();
         player.hitpoint = player.maxHitpoint;
+        shopAnimator.Play("ShopMenu_hidden");
     }
     //Resorces
     public List<int> expTable;
     public Enemy[] enemies;
     public Sprite[] weapons;
     public int[] weaponDmgArr = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200 };
+    public int[] waponCostArr = { 0, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000 };
+
     public bool isBow = false;
 
     //References
@@ -59,6 +61,7 @@ public class GameManager : MonoBehaviour
     public Camera mainCamera;
     public Animator enemyAnimator;
     public Animator EnHP;
+    public Animator shopAnimator;
 
 
     public bool isMoving = true;

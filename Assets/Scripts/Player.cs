@@ -127,11 +127,19 @@ public class Player : Fighter
         GameManager.instance.agility = GameManager.instance.GetCurrentLevel();
         GameManager.instance.strength = GameManager.instance.GetCurrentLevel();
         evadeChance = GameManager.instance.agility + 10;
-        damageBoost = GameManager.instance.agility + 5;
+        damageBoost = GameManager.instance.strength + 5;
         if (GameManager.instance.weaponNum < 10 || GameManager.instance.weaponNum > 14)
             return;
         else
-            GameManager.instance.isBow = true;        
+            GameManager.instance.isBow = true;
+
+        GameManager.instance.WeaponDamage = GameManager.instance.weaponDmgArr[GameManager.instance.weaponNum];
+
+        if (GameManager.instance.weaponNum == 2 || GameManager.instance.weaponNum == 6 || GameManager.instance.weaponNum == 10 || GameManager.instance.weaponNum == 14 || GameManager.instance.weaponNum == 18)
+            GameManager.instance.isBow = true;
+        else
+            GameManager.instance.isBow = false;
+
     }
 
     enum DirectionState

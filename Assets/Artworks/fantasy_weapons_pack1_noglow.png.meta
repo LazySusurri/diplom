@@ -10,7 +10,7 @@ TextureImporter:
     second: axe_1
   - first:
       213: -5673701286640296121
-    second: fantasy_weapons_pack1_noglow_2
+    second: _fantasy_weapons_pack1_noglow_2
   - first:
       213: 3378347991426160323
     second: dagger_1
@@ -19,19 +19,19 @@ TextureImporter:
     second: bow_1
   - first:
       213: -3104371434960029888
-    second: fantasy_weapons_pack1_noglow_5
+    second: _fantasy_weapons_pack1_noglow_5
   - first:
       213: -5978817279210448657
-    second: fantasy_weapons_pack1_noglow_6
+    second: _fantasy_weapons_pack1_noglow_6
   - first:
       213: 1286731737826641711
-    second: fantasy_weapons_pack1_noglow_7
+    second: _fantasy_weapons_pack1_noglow_7
   - first:
       213: 9012836334389053057
-    second: fantasy_weapons_pack1_noglow_8
+    second: _fantasy_weapons_pack1_noglow_8
   - first:
       213: 8914826856875883889
-    second: fantasy_weapons_pack1_noglow_9
+    second: _fantasy_weapons_pack1_noglow_9
   - first:
       213: -908193553424497369
     second: sword_2
@@ -40,7 +40,7 @@ TextureImporter:
     second: axe_2
   - first:
       213: 7321600525211021936
-    second: fantasy_weapons_pack1_noglow_12
+    second: _fantasy_weapons_pack1_noglow_12
   - first:
       213: 624905522764524115
     second: dagger_2
@@ -49,19 +49,19 @@ TextureImporter:
     second: bow_2
   - first:
       213: 4545246964165581679
-    second: fantasy_weapons_pack1_noglow_15
+    second: _fantasy_weapons_pack1_noglow_15
   - first:
       213: 5938303206935319879
-    second: fantasy_weapons_pack1_noglow_16
+    second: _fantasy_weapons_pack1_noglow_16
   - first:
       213: -7933156217280621415
-    second: fantasy_weapons_pack1_noglow_17
+    second: _fantasy_weapons_pack1_noglow_17
   - first:
       213: 5851858445750132973
-    second: fantasy_weapons_pack1_noglow_18
+    second: _fantasy_weapons_pack1_noglow_18
   - first:
       213: -3614409095690788222
-    second: fantasy_weapons_pack1_noglow_19
+    second: _fantasy_weapons_pack1_noglow_19
   - first:
       213: 8031301276238402870
     second: sword_0
@@ -70,7 +70,7 @@ TextureImporter:
     second: axe_0
   - first:
       213: 4085913127274826449
-    second: fantasy_weapons_pack1_noglow_22
+    second: _fantasy_weapons_pack1_noglow_22
   - first:
       213: -1825138051310852068
     second: dagger_0
@@ -79,19 +79,19 @@ TextureImporter:
     second: bow_0
   - first:
       213: 7106835386984911030
-    second: fantasy_weapons_pack1_noglow_25
+    second: _fantasy_weapons_pack1_noglow_25
   - first:
       213: -8896891191807630859
-    second: fantasy_weapons_pack1_noglow_26
+    second: _fantasy_weapons_pack1_noglow_26
   - first:
       213: 202346336844461379
-    second: fantasy_weapons_pack1_noglow_27
+    second: _fantasy_weapons_pack1_noglow_27
   - first:
       213: -6603980809482973791
-    second: fantasy_weapons_pack1_noglow_28
+    second: _fantasy_weapons_pack1_noglow_28
   - first:
       213: 3361551795679599956
-    second: fantasy_weapons_pack1_noglow_29
+    second: _fantasy_weapons_pack1_noglow_29
   - first:
       213: 7213790945928488399
     second: sword_3
@@ -100,7 +100,7 @@ TextureImporter:
     second: axe_3
   - first:
       213: 2380720594811387414
-    second: fantasy_weapons_pack1_noglow_32
+    second: _fantasy_weapons_pack1_noglow_32
   - first:
       213: -860468637692662033
     second: dagger_3
@@ -109,19 +109,19 @@ TextureImporter:
     second: bow_3
   - first:
       213: -8973690583857534363
-    second: fantasy_weapons_pack1_noglow_35
+    second: _fantasy_weapons_pack1_noglow_35
   - first:
       213: -1259693266029593127
-    second: fantasy_weapons_pack1_noglow_36
+    second: _fantasy_weapons_pack1_noglow_36
   - first:
       213: 6900568865924405233
-    second: fantasy_weapons_pack1_noglow_37
+    second: _fantasy_weapons_pack1_noglow_37
   - first:
       213: -10236232010091077
-    second: fantasy_weapons_pack1_noglow_38
+    second: _fantasy_weapons_pack1_noglow_38
   - first:
       213: 4469298566561671875
-    second: fantasy_weapons_pack1_noglow_39
+    second: _fantasy_weapons_pack1_noglow_39
   - first:
       213: -6099013867694818596
     second: sword_4
@@ -130,7 +130,7 @@ TextureImporter:
     second: axe_4
   - first:
       213: 7294224229972459435
-    second: fantasy_weapons_pack1_noglow_42
+    second: _fantasy_weapons_pack1_noglow_42
   - first:
       213: -723065633803069625
     second: dagger_4
@@ -139,19 +139,19 @@ TextureImporter:
     second: bow_4
   - first:
       213: 6907854856300744537
-    second: fantasy_weapons_pack1_noglow_45
+    second: _fantasy_weapons_pack1_noglow_45
   - first:
       213: -322541471151750501
-    second: fantasy_weapons_pack1_noglow_46
+    second: _fantasy_weapons_pack1_noglow_46
   - first:
       213: 1811892132519109660
-    second: fantasy_weapons_pack1_noglow_47
+    second: _fantasy_weapons_pack1_noglow_47
   - first:
       213: 6410191058157774608
-    second: fantasy_weapons_pack1_noglow_48
+    second: _fantasy_weapons_pack1_noglow_48
   - first:
       213: 5290268421124316321
-    second: fantasy_weapons_pack1_noglow_49
+    second: _fantasy_weapons_pack1_noglow_49
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -295,7 +295,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_2
+      name: _fantasy_weapons_pack1_noglow_2
       rect:
         serializedVersion: 2
         x: 64
@@ -358,7 +358,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_5
+      name: _fantasy_weapons_pack1_noglow_5
       rect:
         serializedVersion: 2
         x: 160
@@ -379,7 +379,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_6
+      name: _fantasy_weapons_pack1_noglow_6
       rect:
         serializedVersion: 2
         x: 192
@@ -400,7 +400,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_7
+      name: _fantasy_weapons_pack1_noglow_7
       rect:
         serializedVersion: 2
         x: 224
@@ -421,7 +421,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_8
+      name: _fantasy_weapons_pack1_noglow_8
       rect:
         serializedVersion: 2
         x: 256
@@ -442,7 +442,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_9
+      name: _fantasy_weapons_pack1_noglow_9
       rect:
         serializedVersion: 2
         x: 288
@@ -505,7 +505,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_12
+      name: _fantasy_weapons_pack1_noglow_12
       rect:
         serializedVersion: 2
         x: 64
@@ -568,7 +568,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_15
+      name: _fantasy_weapons_pack1_noglow_15
       rect:
         serializedVersion: 2
         x: 160
@@ -589,7 +589,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_16
+      name: _fantasy_weapons_pack1_noglow_16
       rect:
         serializedVersion: 2
         x: 192
@@ -610,7 +610,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_17
+      name: _fantasy_weapons_pack1_noglow_17
       rect:
         serializedVersion: 2
         x: 224
@@ -631,7 +631,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_18
+      name: _fantasy_weapons_pack1_noglow_18
       rect:
         serializedVersion: 2
         x: 256
@@ -652,7 +652,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_19
+      name: _fantasy_weapons_pack1_noglow_19
       rect:
         serializedVersion: 2
         x: 288
@@ -715,7 +715,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_22
+      name: _fantasy_weapons_pack1_noglow_22
       rect:
         serializedVersion: 2
         x: 64
@@ -778,7 +778,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_25
+      name: _fantasy_weapons_pack1_noglow_25
       rect:
         serializedVersion: 2
         x: 160
@@ -799,7 +799,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_26
+      name: _fantasy_weapons_pack1_noglow_26
       rect:
         serializedVersion: 2
         x: 192
@@ -820,7 +820,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_27
+      name: _fantasy_weapons_pack1_noglow_27
       rect:
         serializedVersion: 2
         x: 224
@@ -841,7 +841,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_28
+      name: _fantasy_weapons_pack1_noglow_28
       rect:
         serializedVersion: 2
         x: 256
@@ -862,7 +862,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_29
+      name: _fantasy_weapons_pack1_noglow_29
       rect:
         serializedVersion: 2
         x: 288
@@ -925,7 +925,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_32
+      name: _fantasy_weapons_pack1_noglow_32
       rect:
         serializedVersion: 2
         x: 64
@@ -988,7 +988,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_35
+      name: _fantasy_weapons_pack1_noglow_35
       rect:
         serializedVersion: 2
         x: 160
@@ -1009,7 +1009,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_36
+      name: _fantasy_weapons_pack1_noglow_36
       rect:
         serializedVersion: 2
         x: 192
@@ -1030,7 +1030,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_37
+      name: _fantasy_weapons_pack1_noglow_37
       rect:
         serializedVersion: 2
         x: 224
@@ -1051,7 +1051,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_38
+      name: _fantasy_weapons_pack1_noglow_38
       rect:
         serializedVersion: 2
         x: 256
@@ -1072,7 +1072,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_39
+      name: _fantasy_weapons_pack1_noglow_39
       rect:
         serializedVersion: 2
         x: 288
@@ -1135,7 +1135,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_42
+      name: _fantasy_weapons_pack1_noglow_42
       rect:
         serializedVersion: 2
         x: 64
@@ -1198,7 +1198,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_45
+      name: _fantasy_weapons_pack1_noglow_45
       rect:
         serializedVersion: 2
         x: 160
@@ -1219,7 +1219,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_46
+      name: _fantasy_weapons_pack1_noglow_46
       rect:
         serializedVersion: 2
         x: 192
@@ -1240,7 +1240,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_47
+      name: _fantasy_weapons_pack1_noglow_47
       rect:
         serializedVersion: 2
         x: 224
@@ -1261,7 +1261,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_48
+      name: _fantasy_weapons_pack1_noglow_48
       rect:
         serializedVersion: 2
         x: 256
@@ -1282,7 +1282,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fantasy_weapons_pack1_noglow_49
+      name: _fantasy_weapons_pack1_noglow_49
       rect:
         serializedVersion: 2
         x: 288
