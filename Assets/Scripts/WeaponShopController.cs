@@ -71,9 +71,10 @@ public class WeaponShopController : MonoBehaviour
                 GameManager.instance.weaponNum = wNumber;
                 GameManager.instance.UpdateHUD();
             }
-                
 
-            foreach(Image img in weapons)
+            GameManager.instance.SaveState();
+
+            foreach (Image img in weapons)
             {
                 if (GetComponent<Image>().name == img.name)
                 {
@@ -91,6 +92,7 @@ public class WeaponShopController : MonoBehaviour
             btnText.color = new Color(144, 144, 144);
             GameManager.instance.weaponNum = wNumber;
             GameManager.instance.UpdateHUD();
+            GameManager.instance.SaveState();
 
             foreach (Image img in weapons)
             {

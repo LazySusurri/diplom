@@ -115,11 +115,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4823777c0d3d1064d8a1047c7ccd1025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoint: 100
-  maxHitpoint: 100
-  expValue: 5
-  goldAmount: 10
-  damage: 3
+  hitpoint: 350
+  maxHitpoint: 350
+  expValue: 100
+  goldAmount: 140
+  damage: 130
   __animator: {fileID: 5289947747220686944}
   isDead: 0
   spriteRenderer: {fileID: 5289947747220686945}

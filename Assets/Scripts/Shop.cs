@@ -11,7 +11,10 @@ public class Shop : Collidable
     {
         if (coll.name == "Player")
         {
-            GameManager.instance.ShowText("ֽאזלטעו F", 35, Color.white, transform.position, Vector3.zero, 0.001f);
+            Vector3 v = new Vector3();
+            v = transform.position;
+            v.y += 0.2f;
+            GameManager.instance.ShowText("ֽאזלטעו F", 35, Color.white, v, Vector3.zero, 0.001f);
             if (Input.GetKeyDown(KeyCode.F))
             {
                 ShopMenuAnnimator.Play("ShopMenu_active");                
