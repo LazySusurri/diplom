@@ -38,14 +38,23 @@ public class GameManager : MonoBehaviour
         player.hitpoint = player.maxHitpoint;
         shopAnimator.Play("ShopMenu_hidden");
     }
+
+    private void Update()
+    {
+        if (Boss == null)
+        {
+            SaveState();
+            SceneManager.LoadScene("GameOver");
+        }
+    }
     //Resorces
     public List<int> expTable;
     public Enemy[] enemies;
     public Sprite[] weapons;
-    public int[] weaponDmgArr = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200 };
-    public int[] waponCostArr = { 0, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000 };
+    public int[] weaponDmgArr = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 240, 250 };
 
     public bool isBow = false;
+    public bool BossFight = false;
 
     //References
     public GameObject fightMenu;
@@ -62,6 +71,7 @@ public class GameManager : MonoBehaviour
     public Animator enemyAnimator;
     public Animator EnHP;
     public Animator shopAnimator;
+    public Enemy Boss;
 
 
     public bool isMoving = true;
@@ -126,7 +136,7 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.SetString("SaveState", s);
 
-       // Debug.Log("SaveState");
+        //Debug.Log("SaveState");
     }
 
     public void LoadState(Scene s, LoadSceneMode mode)

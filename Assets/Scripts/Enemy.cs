@@ -12,13 +12,13 @@ public class Enemy : Fighter
     public SpriteRenderer spriteRenderer;
     public float respawnTime = 1.5f;
 
-    private void Start()
+    protected virtual void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         __animator = GetComponent<Animator>();
         isDead = false;
     }
-    public void MyUpdate()
+    public virtual void MyUpdate()
     {
         if (!isDead)
             return;
@@ -50,7 +50,7 @@ public class Enemy : Fighter
         transform.position = GameManager.instance.EnemyFightPoint.transform.position;
         __animator.Play("spawn");
     }
-    public void Attack()
+    public virtual void Attack()
     {
         __animator.Play("attack");
     }

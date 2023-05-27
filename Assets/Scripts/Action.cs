@@ -13,12 +13,13 @@ public class Action : MonoBehaviour
     public Animator fightMenuAnimator;    
     private bool isActive = false;
     private bool canAttack = true;
+    public int bossHealPots = 1;
 
 
     private void Update()
     {
-        if (!GameManager.instance.isMoving)
-        {            
+        if (GameManager.instance.isMoving == false && GameManager.instance.BossFight == false)
+        {
             enemy = GameManager.instance.enemy;
             if (enemy != null)
             {
@@ -47,22 +48,78 @@ public class Action : MonoBehaviour
             {
                 player._animator.Play("Death");
                 isActive = false;
-                Invoke("PlayerDeath",1f);
+                Invoke("PlayerDeath", 1f);
                 fightMenuAnimator.Play("FightMenuHidden");
-                player.isDead = false;                
+                player.isDead = false;
             }
         }
-        else
+        else if (GameManager.instance.isMoving == true && GameManager.instance.BossFight == false)
         {
             fightMenuAnimator.Play("FightMenuHidden");
             GameManager.instance.EnHP.Play("EnemyHealthHidden");
+        }
+        else if (GameManager.instance.isMoving == false && GameManager.instance.BossFight == true)
+        {
+            enemy = GameManager.instance.Boss;
+            if (enemy != null)
+            {
+                enemy.MyUpdate();
+            }
+            if (canAttack == false)
+            {
+                if (enemy.hitpoint < 1000)
+                {
+                    if (Random.Range(0, 10) < 2 && bossHealPots > 0)
+                    {
+                        bossHealPots -= 1;
+                        enemy.hitpoint += 1000;
+                        GameManager.instance.ShowText("+1000 здр", 25, Color.green, GameManager.instance.Boss.transform.position, Vector3.up * 50, 2f);
+                        if (GameManager.instance.Boss.hitpoint > GameManager.instance.Boss.maxHitpoint)
+                            GameManager.instance.Boss.hitpoint = GameManager.instance.Boss.maxHitpoint;
+                    }
+                    GameManager.instance.UpdateHUD();
+                }
+                Invoke("EnemyAttack", 1);
+                canAttack = true;
+            }
+            if (isActive == true)
+            {
+                Invoke("FMA", 1);
+                isActive = false;
+            }
+
+            if (enemy.isDead == true)
+            {
+                enemy.__animator.Play("death");
+                Invoke("DestroyBoss", 0.75f);
+                GameManager.instance.isMoving = true;
+                GameManager.instance.EnHP.Play("EnemyHealthHidden");
+                canAttack = false;
+            }
+
+            if (player.isDead)
+            {
+                player._animator.Play("Death");
+                GameManager.instance.RandomEnemy();
+                enemy = GameManager.instance.enemy;
+                GameManager.instance.Boss.hitpoint = 3500;
+                bossHealPots = 1;
+                isActive = false;
+                Invoke("PlayerDeath", 1f);
+                fightMenuAnimator.Play("FightMenuHidden");
+                player.isDead = false;
+                GameManager.instance.fightCamera.enabled = false;
+                GameManager.instance.mainCamera.enabled = true;
+                GameManager.instance.fightCamera.transform.position = new Vector3(0.812f, -8.82f, -10);
+                GameManager.instance.BossFight = false;
+            }
         }
         GameManager.instance.WeaponDamage = GameManager.instance.weaponDmgArr[GameManager.instance.weaponNum];
     }
 
     public void PlayerAttack()
     {
-        double attack = UnityEngine.Random.Range(0, 10);
+        double attack = UnityEngine.Random.Range(0, 10);          
         if (attack > 2)
         {
             Damage dmg = new Damage
@@ -102,37 +159,43 @@ public class Action : MonoBehaviour
 
     public void PlayerRun()
     {
-        double run = UnityEngine.Random.Range(0, 10);
-        //Debug.Log(run);
-        if (run >= 4) 
+        if (GameManager.instance.BossFight == false)
         {
-            GameManager.instance.enemy.Respawn();
+            double run = UnityEngine.Random.Range(0, 10);
+            //Debug.Log(run);
+            if (run >= 4)
+            {
+                GameManager.instance.enemy.Respawn();
 
-            player.transform.position = new Vector3(0, 5.5f, 0);            
+                player.transform.position = new Vector3(0, 5.5f, 0);
 
-            GameManager.instance.fightCamera.enabled = false;
-            GameManager.instance.mainCamera.enabled = true;
+                GameManager.instance.fightCamera.enabled = false;
+                GameManager.instance.mainCamera.enabled = true;
 
-            GameManager.instance.healPotions = 5;
+                GameManager.instance.healPotions = 5;
 
-            GameManager.instance.isMoving = true;
+                GameManager.instance.isMoving = true;
 
-            isActive = true;
-            canAttack = true;
+                isActive = true;
+                canAttack = true;
 
-            fightMenuAnimator.Play("FightMenuHidden");
+                fightMenuAnimator.Play("FightMenuHidden");
 
-            GameManager.instance.ShowText("Вы смогли сбежать", 30, Color.black, player.transform.position, Vector3.up * 25, 2f);
+                GameManager.instance.ShowText("Вы смогли сбежать", 30, Color.black, player.transform.position, Vector3.up * 25, 2f);
 
-            GameManager.instance.SaveState();
+                GameManager.instance.SaveState();
+            }
+            else
+            {
+                canAttack = false;
+                fightMenuAnimator.Play("FightMenuHidden");
+            }
+
+            GameManager.instance.UpdateHUD();
         }
         else
-        {
-            canAttack = false;
-            fightMenuAnimator.Play("FightMenuHidden");
-        }
-
-        GameManager.instance.UpdateHUD();
+            GameManager.instance.ShowText("Вы не можете сбежать...", 30, Color.black, player.transform.position, Vector3.up * 25, 2f);
+        
     }
 
     public void PlayerDeath()
@@ -170,7 +233,7 @@ public class Action : MonoBehaviour
     public void EnemyAttack()
     {
         double attack = UnityEngine.Random.Range((GameManager.instance.player.evadeChance / 100), 10);
-        if (attack <= 8)
+        if (attack < 8)
         {
             if (enemy.isDead == false)
             {                
@@ -207,7 +270,7 @@ public class Action : MonoBehaviour
         GameManager.instance.gold += enemy.goldAmount;
         GameManager.instance.enemy.Respawn();
 
-        GameManager.instance.fightCamera.enabled = false;
+        GameManager.instance.fightCamera.enabled = false;  // y = 15.65 for boss fight
         GameManager.instance.mainCamera.enabled = true;
         GameManager.instance.ShowText("+" + enemy.expValue.ToString() + " опыта", 30, new Color(185, 141, 36), player.transform.position, Vector3.up * 30, 1f);
         Invoke("GoldShow",1f);
@@ -230,5 +293,11 @@ public class Action : MonoBehaviour
     private void Resp()
     {
         enemy.Respawn();
+    }
+
+    public void DestroyBoss()
+    {
+        Destroy(gameObject);
+        SceneManager.LoadScene("GameOver");
     }
 }

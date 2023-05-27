@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -43410189
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1016085844418303970, guid: 60530239834ee7f488872ac5b2173fec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -100,7 +100,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.20320062}
+  m_Offset: {x: 0, y: 0.18376559}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -111,7 +111,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.10456714}
+  m_Size: {x: 0.16, y: 0.14343722}
   m_EdgeRadius: 0
 --- !u!114 &7064672496800684824
 MonoBehaviour:
@@ -125,10 +125,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c892012a3dd5af440b5363f65597e34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoint: 100
-  maxHitpoint: 100
+  hitpoint: 105
+  maxHitpoint: 105
   _animator: {fileID: 7064672496800684827}
   level: 0
+  isDead: 0
+  evadeChance: 0
+  damageBoost: 0
 --- !u!114 &7064672496800684828
 MonoBehaviour:
   m_ObjectHideFlags: 0

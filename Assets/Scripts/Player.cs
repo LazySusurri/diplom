@@ -13,7 +13,6 @@ public class Player : Fighter
     private BoxCollider2D _boxCollider;
     public Animator _animator;
     private float _walkTime = 0, _walkCD = 0.1f;
-    public int level;
     public bool isDead = false;
     public int evadeChance;
     public int damageBoost;
@@ -126,12 +125,8 @@ public class Player : Fighter
         maxHitpoint = 100 + (5 * GameManager.instance.GetCurrentLevel());
         GameManager.instance.agility = GameManager.instance.GetCurrentLevel();
         GameManager.instance.strength = GameManager.instance.GetCurrentLevel();
-        evadeChance = GameManager.instance.agility + 10;
-        damageBoost = GameManager.instance.strength + 5;
-        if (GameManager.instance.weaponNum < 10 || GameManager.instance.weaponNum > 14)
-            return;
-        else
-            GameManager.instance.isBow = true;
+        evadeChance = GameManager.instance.agility + 20;
+        damageBoost = GameManager.instance.strength + 5;        
 
         GameManager.instance.WeaponDamage = GameManager.instance.weaponDmgArr[GameManager.instance.weaponNum];
 

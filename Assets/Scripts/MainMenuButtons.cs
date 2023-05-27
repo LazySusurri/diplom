@@ -18,6 +18,14 @@ public class MainMenuButtons : MonoBehaviour
 
     public void ExitGame()
     {
+        if(SceneManager.GetActiveScene().name == "Main")
+            GameManager.instance.SaveState();
         Application.Quit();
+    }
+
+    public void MainMenu()
+    {
+        GameManager.instance.SaveState();
+        SceneManager.LoadScene("MainMenu");
     }
 }
